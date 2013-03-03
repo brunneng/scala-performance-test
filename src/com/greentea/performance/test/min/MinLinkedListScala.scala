@@ -21,7 +21,7 @@ class MinLinkedListScala(elementsCount : Int) extends ITestCode {
      var min : String = null
      var minLen = Int.MaxValue
      for (v <- list) {
-       val len = v.length
+       val len = v.size
        if (len < minLen) {
          min = v
          minLen = len

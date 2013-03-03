@@ -12,18 +12,18 @@ import java.util.Set;
  */
 public class AddToHashSetJava implements ITestCode {
 
-   private Set<String> set;
+   private Set<Object> set;
 
    public String getName() {
-      return "Add to hash set (Java)";
+      return "Add new Object() to hash set (Java)";
    }
 
    public void init() {
-      set = new HashSet<String>();
+      set = new HashSet<Object>();
    }
 
    public void run() {
-      set.add("1");
+      set.add(new Object());
    }
 
    public void clean() {

@@ -2,6 +2,7 @@ package com.greentea.performance.test.add
 
 import com.greentea.performance.test.ITestCode
 import collection.mutable
+import java.util.Random
 
 /**
  * User: goodg_000

@@ -10,16 +10,16 @@ import collection.mutable
  */
 class AddToHashSetScala extends ITestCode {
 
-  var set : mutable.HashSet[String] = null
+  var set : mutable.HashSet[Object] = null
 
-  def getName: String = "Add to hash set (Scala)"
+  def getName: String = "Add new Object() to hash set (Scala)"
 
   def init() {
-    set = new mutable.HashSet[String]
+    set = new mutable.HashSet[Object]
   }
 
   def run() {
-    set += "1"
+    set += new Object()
   }
 
   def clean() {
