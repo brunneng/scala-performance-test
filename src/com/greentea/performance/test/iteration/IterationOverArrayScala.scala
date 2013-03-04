@@ -23,6 +23,8 @@ class IterationOverArrayScala(elementsCount : Int) extends ITestCode {
     }
   }
 
+  def getResult: AnyRef = array
+
   def clean() {
     array = null
   }

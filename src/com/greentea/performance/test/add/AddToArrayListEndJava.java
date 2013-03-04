@@ -26,6 +26,10 @@ public class AddToArrayListEndJava implements ITestCode {
       list.add("1");
    }
 
+   public Object getResult() {
+      return list;
+   }
+
    public void clean() {
       list = null;
    }

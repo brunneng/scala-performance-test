@@ -14,6 +14,7 @@ public class MinArrayListJava implements ITestCode {
 
    private List<String> list;
    private int elementsCount = 10;
+   private String min;
 
    public MinArrayListJava(int elementsCount) {
       this.elementsCount = elementsCount;
@@ -31,7 +32,7 @@ public class MinArrayListJava implements ITestCode {
    }
 
    public void run() {
-      String min = null;
+      min = null;
       int lengthOfMin = Integer.MAX_VALUE;
       for (String val : list) {
          int len = val.length();
@@ -42,7 +43,12 @@ public class MinArrayListJava implements ITestCode {
       }
    }
 
+   public Object getResult() {
+      return min;
+   }
+
    public void clean() {
       list = null;
+      min = null;
    }
 }

@@ -10,6 +10,7 @@ import com.greentea.performance.test.ITestCode
 class SumLinkedListScala(elementsCount : Int) extends ITestCode {
 
   var list : List[Int] = null
+  var sum : Int = 0
 
   def getName: String = "Sum of " + elementsCount + " elements of linked list (Scala)"
 
@@ -18,8 +19,10 @@ class SumLinkedListScala(elementsCount : Int) extends ITestCode {
   }
 
   def run() {
-    val sum = list.sum
+    sum = list.sum
   }
+
+  def getResult: AnyRef = ""+sum
 
   def clean() {
     list = null

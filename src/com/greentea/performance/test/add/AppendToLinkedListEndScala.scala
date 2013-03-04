@@ -21,6 +21,8 @@ class AppendToLinkedListEndScala extends ITestCode {
     list = list.append(mutable.LinkedList("1"))
   }
 
+  def getResult: AnyRef = list
+
   def clean() {
     list = null
   }

@@ -14,6 +14,7 @@ public class SumArrayListJava implements ITestCode {
 
    private List<Integer> list;
    private int elementsCount = 10;
+   private int sum = 0;
 
    public SumArrayListJava(int elementsCount) {
       this.elementsCount = elementsCount;
@@ -31,10 +32,14 @@ public class SumArrayListJava implements ITestCode {
    }
 
    public void run() {
-      int sum = 0;
+      sum = 0;
       for (Integer val : list) {
          sum += val;
       }
+   }
+
+   public Object getResult() {
+      return sum;
    }
 
    public void clean() {

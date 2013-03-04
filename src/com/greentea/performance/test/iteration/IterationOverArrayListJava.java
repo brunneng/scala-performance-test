@@ -36,6 +36,10 @@ public class IterationOverArrayListJava implements ITestCode {
       }
    }
 
+   public Object getResult() {
+      return list;
+   }
+
    public void clean() {
       list = null;
    }

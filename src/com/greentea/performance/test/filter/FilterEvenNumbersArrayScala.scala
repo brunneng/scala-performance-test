@@ -10,19 +10,23 @@ import collection.mutable
   */
 class FilterEvenNumbersArrayScala(elementsCount : Int) extends ITestCode {
 
-   var array : Array[Int] = null
+  var array: Array[Int] = null
+  var res: Array[Int] = null
 
-   def getName: String = "Select even numbers from array of length " + elementsCount + " (Scala)"
+  def getName: String = "Select even numbers from array of length " + elementsCount + " (Scala)"
 
-   def init() {
-     array = (0 to elementsCount).toArray
-   }
+  def init() {
+    array = (0 to elementsCount).toArray
+  }
 
-   def run() {
-     val res = array.filter(_ % 2 == 0)
-   }
+  def run() {
+    res = array.filter(_ % 2 == 0)
+  }
 
-   def clean() {
-     array = null
-   }
+  def getResult: AnyRef = res
+
+  def clean() {
+    array = null
+    res = null
+  }
  }

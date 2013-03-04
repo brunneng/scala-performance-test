@@ -22,6 +22,8 @@ class AddToHashSetScala extends ITestCode {
     set += new Object()
   }
 
+  def getResult: AnyRef = set
+
   def clean() {
     set = null
   }

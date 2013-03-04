@@ -9,5 +9,6 @@ public interface ITestCode {
    String getName();
    void init();
    void run();
+   Object getResult();
    void clean();
 }

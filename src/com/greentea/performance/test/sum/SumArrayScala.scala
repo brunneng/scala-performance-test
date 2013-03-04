@@ -10,6 +10,7 @@ import com.greentea.performance.test.ITestCode
 class SumArrayScala(elementsCount : Int) extends ITestCode {
 
   var array : Array[Int] = null
+  var sum : Int = 0
 
   def getName: String = "Sum of " + elementsCount + " elements of array (Scala)"
 
@@ -18,8 +19,10 @@ class SumArrayScala(elementsCount : Int) extends ITestCode {
   }
 
   def run() {
-    val sum = array.sum
+    sum = array.sum
   }
+
+  def getResult: AnyRef = ""+sum
 
   def clean() {
     array = null

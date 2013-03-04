@@ -23,6 +23,8 @@ class AddToListBufferEndScala extends ITestCode {
     list += "1"
   }
 
+  def getResult: AnyRef = list
+
   def clean() {
     list = null
   }

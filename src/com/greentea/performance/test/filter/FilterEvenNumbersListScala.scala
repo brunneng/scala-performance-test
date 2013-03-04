@@ -10,6 +10,7 @@ import com.greentea.performance.test.ITestCode
 class FilterEvenNumbersListScala(elementsCount : Int) extends ITestCode {
 
   var list : List[Int] = null
+  var res : List[Int] = null
 
   def getName: String = "Select even numbers from list of length " + elementsCount + " (Scala)"
 
@@ -18,10 +19,13 @@ class FilterEvenNumbersListScala(elementsCount : Int) extends ITestCode {
   }
 
   def run() {
-    val res = list.filter(_ % 2 == 0)
+    res = list.filter(_ % 2 == 0)
   }
+
+  def getResult: AnyRef = res
 
   def clean() {
     list = null
+    res = null
   }
 }

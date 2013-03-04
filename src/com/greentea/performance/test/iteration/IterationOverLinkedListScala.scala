@@ -23,6 +23,8 @@ class IterationOverLinkedListScala(elementsCount : Int) extends ITestCode {
     }
   }
 
+  def getResult: AnyRef = list
+
   def clean() {
     list = null
   }

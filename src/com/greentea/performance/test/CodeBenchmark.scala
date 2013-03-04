@@ -19,18 +19,25 @@ class CodeBenchmark {
   }
 
   def runTests() {
+    var resultsHashSum = 0L
     val i = tests.iterator()
     while (i.hasNext) {
       val testCode = i.next()
       testCode.init()
 
+      if (testCode.isInstanceOf[IteratedTestCode]) {
+        testCode.asInstanceOf[IteratedTestCode].warmUp()
+      }
+
       val start = System.currentTimeMillis()
       testCode.run()
       val end = System.currentTimeMillis()
+      resultsHashSum += testCode.getResult.hashCode()
       printf("%70s: %s ms\n", testCode.getName, (end - start))
 
       testCode.clean()
       System.gc()
     }
+    println(resultsHashSum)
   }
 }

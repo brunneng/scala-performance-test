@@ -16,6 +16,7 @@ public class GroupArrayListJava implements ITestCode {
 
    private List<String> list;
    private int elementsCount = 10;
+   private Map<Integer, List<String>> group;
 
    public GroupArrayListJava(int elementsCount) {
       this.elementsCount = elementsCount;
@@ -33,7 +34,7 @@ public class GroupArrayListJava implements ITestCode {
    }
 
    public void run() {
-      Map<Integer, List<String>> group = new HashMap<Integer, List<String>>();
+      group = new HashMap<Integer, List<String>>();
       for (String val : list) {
          Integer key = val.length();
          List<String> values = group.get(key);
@@ -46,7 +47,12 @@ public class GroupArrayListJava implements ITestCode {
       }
    }
 
+   public Object getResult() {
+      return group;
+   }
+
    public void clean() {
       list = null;
+      group = null;
    }
 }

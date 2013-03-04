@@ -14,6 +14,7 @@ public class FilterEvenNumbersArrayListJava implements ITestCode {
 
    private List<Integer> list;
    private int elementsCount = 10;
+   private List<Integer> res;
 
    public FilterEvenNumbersArrayListJava(int elementsCount) {
       this.elementsCount = elementsCount;
@@ -31,7 +32,7 @@ public class FilterEvenNumbersArrayListJava implements ITestCode {
    }
 
    public void run() {
-      List<Integer> res = new ArrayList<Integer>();
+      res = new ArrayList<Integer>();
       for (Integer val : list) {
          if (val % 2 == 0) {
             res.add(val);
@@ -39,8 +40,13 @@ public class FilterEvenNumbersArrayListJava implements ITestCode {
       }
    }
 
+   public Object getResult() {
+      return res;
+   }
+
    public void clean() {
       list = null;
+      res = null;
    }
 
 }

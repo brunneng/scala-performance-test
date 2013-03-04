@@ -15,6 +15,7 @@ public class FilterEvenNumbersLinkedListJava implements ITestCode {
 
    private List<Integer> list;
    private int elementsCount = 10;
+   private List<Integer> res;
 
    public FilterEvenNumbersLinkedListJava(int elementsCount) {
       this.elementsCount = elementsCount;
@@ -32,7 +33,7 @@ public class FilterEvenNumbersLinkedListJava implements ITestCode {
    }
 
    public void run() {
-      List<Integer> res = new LinkedList<Integer>();
+      res = new LinkedList<Integer>();
       for (Integer val : list) {
          if (val % 2 == 0) {
             res.add(val);
@@ -40,8 +41,13 @@ public class FilterEvenNumbersLinkedListJava implements ITestCode {
       }
    }
 
+   public Object getResult() {
+      return res;
+   }
+
    public void clean() {
       list = null;
+      res = null;
    }
 
 }

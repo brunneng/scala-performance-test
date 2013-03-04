@@ -26,6 +26,11 @@ public class AddToHashSetJava implements ITestCode {
       set.add(new Object());
    }
 
+   public Object getResult() {
+      return set;
+   }
+
+
    public void clean() {
       set = null;
    }
